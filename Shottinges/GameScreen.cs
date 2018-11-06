@@ -45,12 +45,12 @@ namespace Shooting
         public Image explo;
         public Image[] item = new Image[3];
         
+
         public Image _start;
         public Image _over;
         public Image shield;
 
-         
-
+        
 
         public Font font;
 
@@ -69,7 +69,8 @@ namespace Shooting
         {
             if (gc == null)
             {
-                
+                Graphics.FromImage();
+                Graphics.Equals();
                 
             }
 
