@@ -70,6 +70,7 @@ namespace Shooting
             if (gc == null)
             {
                 Graphics.FromImage();
+                Graphics.Equals();
                 
             }
 
