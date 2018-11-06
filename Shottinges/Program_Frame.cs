@@ -105,7 +105,7 @@ namespace Shooting
         private int Score = 0;
 
         Random random;
-
+        
     
         public Program_Frame()
         {
