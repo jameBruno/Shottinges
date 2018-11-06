@@ -39,7 +39,7 @@ namespace Shooting
         public int keybuff;
 
         // 게임용 변수
-
+        
         public int score;
         public int mylife;
         public int gamecnt;
@@ -69,6 +69,7 @@ namespace Shooting
 
 
 
+        /*
 
         Program_Frame()
         {
@@ -84,7 +85,7 @@ namespace Shooting
         }
 
 
-
+        */
 
 
 

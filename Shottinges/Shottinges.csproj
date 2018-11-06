@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180830\build\OpenCvSharp3-AnyCPU.props" Condition="Exists('..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180830\build\OpenCvSharp3-AnyCPU.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -11,6 +12,8 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +35,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180830\lib\net46\OpenCvSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp.Blob, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180830\lib\net46\OpenCvSharp.Blob.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180830\lib\net46\OpenCvSharp.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp.UserInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180830\lib\net46\OpenCvSharp.UserInterface.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,6 +72,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -66,6 +84,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,5 +98,57 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Image\1스테이지 이미지\1sage background2.jpg" />
+    <Content Include="Image\1스테이지 이미지\1stage background.jpg" />
+    <Content Include="Image\1스테이지 이미지\1stage boss.png" />
+    <Content Include="Image\1스테이지 이미지\1stage enemy2.png" />
+    <Content Include="Image\1스테이지 이미지\1stage enermy %281%29.png" />
+    <Content Include="Image\1스테이지 이미지\1stage enermy %282%29.png" />
+    <Content Include="Image\1스테이지 이미지\1stage enermy.png" />
+    <Content Include="Image\1스테이지 이미지\cloud1.png" />
+    <Content Include="Image\1스테이지 이미지\cloud2.png" />
+    <Content Include="Image\1스테이지 이미지\cloud3.png" />
+    <Content Include="Image\2스테이지\2stage back ground.jpg" />
+    <Content Include="Image\2스테이지\2stage back ground3.jpg" />
+    <Content Include="Image\2스테이지\2stage background2.jpg" />
+    <Content Include="Image\2스테이지\desert enemy.png" />
+    <Content Include="Image\2스테이지\desert enemy2.png" />
+    <Content Include="Image\3스테이지 이미지\3stage background.jpg" />
+    <Content Include="Image\3스테이지 이미지\3stage background2.jpg" />
+    <Content Include="Image\3스테이지 이미지\3stage enemy.jpg" />
+    <Content Include="Image\3스테이지 이미지\3stage enemy1.jpg" />
+    <Content Include="Image\3스테이지 이미지\3stage enemy3.png" />
+    <Content Include="Image\3스테이지 이미지\3stage tree.png" />
+    <Content Include="Image\3스테이지 이미지\kisspng-blue-spruce-tree-norway-spruce-plant-pine-the-fir-trees-in-the-game-5a6a19a5afe942.3244148315169028217206.png" />
+    <Content Include="Image\메인 이미지\Game Image.jpg" />
+    <Content Include="Image\아이템 이미지\100 score.png" />
+    <Content Include="Image\아이템 이미지\1up item.png" />
+    <Content Include="Image\아이템 이미지\50 score.png" />
+    <Content Include="Image\아이템 이미지\powerup.png" />
+    <Content Include="Image\아이템 이미지\speedup.png" />
+    <Content Include="Image\총알, 공격 이미지\400802194.png" />
+    <Content Include="Image\총알, 공격 이미지\attack1.png" />
+    <Content Include="Image\총알, 공격 이미지\attack2.png" />
+    <Content Include="Image\총알, 공격 이미지\bullet.png" />
+    <Content Include="Image\총알, 공격 이미지\bullet1.png" />
+    <Content Include="Image\총알, 공격 이미지\bullet2.png" />
+    <Content Include="Image\총알, 공격 이미지\bullet3.png" />
+    <Content Include="Image\총알, 공격 이미지\bullet4.png" />
+    <Content Include="Image\총알, 공격 이미지\kisspng-lightning-transparency-and-translucency-light-effect-lightning-5a957625dd5400.9763501615197445499066.png" />
+    <Content Include="Image\총알, 공격 이미지\kisspng-text-illustration-yellow-light-effect-5a708bf7ad55a5.79332539151732530371.png" />
+    <Content Include="Image\폭발 등 이펙트 이미지\explosion_01.png" />
+    <Content Include="Image\폭발 등 이펙트 이미지\explosion_02.png" />
+    <Content Include="Image\폭발 등 이펙트 이미지\explosion_03.png" />
+    <Content Include="Image\플레이어 기체\player.png" />
+    <Content Include="Image\플레이어 기체\player2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180830\build\OpenCvSharp3-AnyCPU.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180830\build\OpenCvSharp3-AnyCPU.props'))" />
+  </Target>
 </Project>

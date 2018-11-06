@@ -38,16 +38,19 @@ namespace Shooting
         public Image[] cloud = new Image[5];           //구름
         public Image title;                         //타이틀화면
         public Image title_key;
-
+        
         public Image[] chr = new Image[9];
         public Image[] enemy = new Image[5];
         public Image[] bullet = new Image[5];
         public Image explo;
         public Image[] item = new Image[3];
-
+        
         public Image _start;
         public Image _over;
         public Image shield;
+
+         
+
 
         public Font font;
 
@@ -66,7 +69,8 @@ namespace Shooting
         {
             if (gc == null)
             {
-
+                
+                
             }
 
         }
