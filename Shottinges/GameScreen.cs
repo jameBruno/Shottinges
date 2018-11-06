@@ -77,22 +77,5 @@ namespace Shooting
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
