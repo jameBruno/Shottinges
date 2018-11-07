@@ -48,7 +48,7 @@ namespace Shooting
         // 게임용 변수
         
         public int score;
-        public int mylife;
+        public int mylife;// 남은 life
         public int gamecnt;
         public int scrspeed = 16;
         public int level;
