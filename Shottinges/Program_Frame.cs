@@ -73,7 +73,7 @@ namespace Shooting
 
 
         public ArrayList items;
-
+        public ArrayList Items1;
 
         /*
 
