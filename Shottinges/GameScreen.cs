@@ -51,7 +51,7 @@ namespace Shooting
         public Image _over;
         public Image shield;
 
-        
+        public Image _Startes;
 
         public Font font;
 
