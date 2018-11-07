@@ -66,7 +66,7 @@ namespace Shooting
         public ArrayList items = new ArrayList();
 
 
-
+        public ArrayList items;
 
 
         /*
