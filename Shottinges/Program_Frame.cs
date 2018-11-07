@@ -106,13 +106,13 @@ namespace Shooting
 
         Random random;
         
-    
+        
         public Program_Frame()
         {
             // 플레이어 좌표값 초기화
             Player.X = 150;
             Player.Y = 350;
-
+            
             Enemy.X = 100;
             Enemy.Y = 0;
 

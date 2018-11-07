@@ -69,15 +69,90 @@ namespace Shooting
         {
             if (gc == null)
             {
-                Graphics.FromImage();
-                Graphics.Equals();
+                
+                
+                
+
+
                 
             }
 
         }
 
+        public void Update(Graphics g)
+        {
+
+            cnt = main.cnt;
+            gamecnt = main.gamecnt;
+
+            if(gc == null)
+            {
+                return;
+            }
+
+            //dblPaint();
+
+            g.DrawImage(dblBuff, 0, 0);
+            
+        }
+
+        public void dblPaint()
+        {
+            switch(main.status)
+            {
+                case 0:
+                    Draw_TITLE();
+                    gc.DrawString("Education ver", this.font, Brushes.Black, 10, 40);
+                    break;
+                case 1:
+                    Draw_BG();
+                    Draw_MY();
+                    Draw_BG2();
+                    drawImageAnc(_start, 0, 270, 3);
+                    break;
+
+                case 2:
+                
+                case 4://일시정지
+                    Draw_BG();
+                    Draw_MY();
+                    Draw_ENEMY();
+                    Draw_BULLET();
+                    Draw_EFFECT();
+                    Draw_ITEM();
+                    Draw_BG2();
+                    Draw_UI();
+                    break;
+
+                case 3://게임오버
+                    Draw_BG();
+                    Draw_ENEMY();
+                    Draw_BULLET();
+                    Draw_BG2();
+                    drawImageAnc(_over, 320, 240, 4);
+                    Draw_UI();
+                    break;
+                default:
+                    break;
+                    
 
 
+
+
+
+            }
+
+
+
+        }
+
+        public void SetColor(int Red, int Green, int Blue)
+        {
+            
+
+
+        }
+        
 
 
 
