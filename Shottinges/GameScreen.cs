@@ -72,7 +72,6 @@ namespace Shooting
         {
             if (gc == null)
             {
-               
                 
             }
 
