@@ -39,11 +39,11 @@ namespace Shooting
         public Image title;                         //타이틀화면
         public Image title_key;
         
-        public Image[] chr = new Image[9];
-        public Image[] enemy = new Image[5];
-        public Image[] bullet = new Image[5];
-        public Image explo;
-        public Image[] item = new Image[3];
+        public Image[] chr = new Image[9];// 캐릭터
+        public Image[] enemy = new Image[5];// 적
+        public Image[] bullet = new Image[5];// 총알
+        public Image explo;// 폭발
+        public Image[] item = new Image[3];// 아이템
         
 
         public Image _start;

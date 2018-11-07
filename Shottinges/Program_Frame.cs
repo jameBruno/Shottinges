@@ -19,11 +19,11 @@ namespace Shooting
 
         //public const ContextStaticAttribute int UP_PRESSED = 0x001;
 
-        public static int UP_PRESSED = 0x001;
-        public static int DOWN_PRESSED = 0x002;
-        public static int LEFT_PRESSED = 0x004;
+        public static int UP_PRESSED    = 0x001;
+        public static int DOWN_PRESSED  = 0x002;
+        public static int LEFT_PRESSED  = 0x004;
         public static int RIGHT_PRESSED = 0x008;
-        public static int FIRE_PRESSED = 0x010;
+        public static int FIRE_PRESSED  = 0x010;
 
         // 스레드 객체
         Thread mainwork;
