@@ -58,12 +58,12 @@ namespace Shooting
         public int[] v = { -2, -1, 0, 1, 2, 1, 0, -1 };
         public int[] v2 = { -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -7 };
         public int step = 0;
-
+        
 
         public GameScreen(Program_Frame main)
         {
             this.main = main;
-            font = new Font("Default", 12, FontStyle.Bold);
+            //font = new Font("Default", 12, FontStyle.Bold);
         }
 
         public void Paint(Graphics g)
@@ -97,6 +97,7 @@ namespace Shooting
             
         }
 
+        /*
         public void dblPaint()
         {
             switch(main.status)
@@ -146,6 +147,7 @@ namespace Shooting
 
 
         }
+        */
 
         public void SetColor(int Red, int Green, int Blue)
         {
