@@ -65,7 +65,7 @@ namespace Shooting
         public GameScreen(Program_Frame main)
         {
             this.main = main;
-            font = new Font("Default", 12, FontStyle.Bold);
+            font = new Font("Default", 12, System.Drawing.FontStyle.Bold);
         }
 
         public void Paint(Graphics g)
