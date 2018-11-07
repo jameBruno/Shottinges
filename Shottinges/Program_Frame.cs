@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 using System.ComponentModel;
 using System.Data;
+using System.Drawing.Printing;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,7 @@ namespace Shooting
         Boolean loof = true;
 
         Random rnd = new Random();
-
+        
         public int status;
         public int cnt;
         public int delay;
@@ -97,14 +98,16 @@ namespace Shooting
 
 
         // 플레이어
-        private Point Player;
+        private System.Drawing.Point Player;
 
-        private Point Enemy;
+        private System.Drawing.Point Players;
 
-        private Point Zig_Enemy;
+        private System.Drawing.Point Enemy;
+
+        private System.Drawing.Point Zig_Enemy;
 
         // 점수 증가
-        private Point Support;
+        private System.Drawing.Point Support;
 
         private int Score = 0;
 

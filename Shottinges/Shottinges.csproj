@@ -47,8 +47,11 @@
     <Reference Include="OpenCvSharp.UserInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
       <HintPath>..\packages\OpenCvSharp3-AnyCPU.3.4.1.20180830\lib\net46\OpenCvSharp.UserInterface.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +61,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -72,6 +78,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.gl.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +112,107 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Images\1stage\1sage background2.jpg" />
+    <Content Include="Images\1stage\1stage background.jpg" />
+    <Content Include="Images\1stage\1stage boss.png" />
+    <Content Include="Images\1stage\1stage cloud1.png" />
+    <Content Include="Images\1stage\1stage cloud2.png" />
+    <Content Include="Images\1stage\1stage cloud3.png" />
+    <Content Include="Images\1stage\1stage enemy2.png" />
+    <Content Include="Images\1stage\1stage enermy.png" />
+    <Content Include="Images\2stage\2stage back ground.jpg" />
+    <Content Include="Images\2stage\2stage back ground3.jpg" />
+    <Content Include="Images\2stage\2stage background2.jpg" />
+    <Content Include="Images\2stage\2stage boss.png" />
+    <Content Include="Images\2stage\2stage enemy.png" />
+    <Content Include="Images\2stage\2stage enemy2.png" />
+    <Content Include="Images\3stage\3stage background.jpg" />
+    <Content Include="Images\3stage\3stage background2.jpg" />
+    <Content Include="Images\3stage\3stage boss.png" />
+    <Content Include="Images\3stage\3stage enemy2.png" />
+    <Content Include="Images\3stage\3stage enemy3.png" />
+    <Content Include="Images\3stage\3stage tree.png" />
+    <Content Include="Images\3stage\3stage tree2.png" />
+    <Content Include="Images\아이템\100 scoreItem 1.png" />
+    <Content Include="Images\아이템\100 scoreItem 2.png" />
+    <Content Include="Images\아이템\100 scoreItem 3.png" />
+    <Content Include="Images\아이템\100 scoreItem 4.png" />
+    <Content Include="Images\아이템\100 scoreItem 5.png" />
+    <Content Include="Images\아이템\100 scoreItem 6.png" />
+    <Content Include="Images\아이템\100 scoreItem 7.png" />
+    <Content Include="Images\아이템\1up item 1.png" />
+    <Content Include="Images\아이템\1up item 2.png" />
+    <Content Include="Images\아이템\1up item 3.png" />
+    <Content Include="Images\아이템\1up item 4.png" />
+    <Content Include="Images\아이템\1up item 5.png" />
+    <Content Include="Images\아이템\1up item 6.png" />
+    <Content Include="Images\아이템\1up item 7.png" />
+    <Content Include="Images\아이템\1up item 8.png" />
+    <Content Include="Images\아이템\50 score item 1.png" />
+    <Content Include="Images\아이템\50 score item 2.png" />
+    <Content Include="Images\아이템\50 score item 3.png" />
+    <Content Include="Images\아이템\50 score item 4.png" />
+    <Content Include="Images\아이템\50 score item 5.png" />
+    <Content Include="Images\아이템\50 score item 6.png" />
+    <Content Include="Images\아이템\50 score item 7.png" />
+    <Content Include="Images\아이템\powerup 1.png" />
+    <Content Include="Images\아이템\powerup 10.png" />
+    <Content Include="Images\아이템\powerup 2.png" />
+    <Content Include="Images\아이템\powerup 3.png" />
+    <Content Include="Images\아이템\powerup 4.png" />
+    <Content Include="Images\아이템\powerup 5.png" />
+    <Content Include="Images\아이템\powerup 6.png" />
+    <Content Include="Images\아이템\powerup 7.png" />
+    <Content Include="Images\아이템\powerup 8.png" />
+    <Content Include="Images\아이템\powerup 9.png" />
+    <Content Include="Images\아이템\sheild item 1.png" />
+    <Content Include="Images\아이템\sheild item 2.png" />
+    <Content Include="Images\아이템\sheild item 3.png" />
+    <Content Include="Images\아이템\sheild item 4.png" />
+    <Content Include="Images\아이템\sheild item 5.png" />
+    <Content Include="Images\아이템\sheild item 6.png" />
+    <Content Include="Images\아이템\sheild item 7.png" />
+    <Content Include="Images\아이템\sheild item 8.png" />
+    <Content Include="Images\아이템\shile item.png" />
+    <Content Include="Images\아이템\speedup 1.png" />
+    <Content Include="Images\아이템\speedup 10.png" />
+    <Content Include="Images\아이템\speedup 2.png" />
+    <Content Include="Images\아이템\speedup 3.png" />
+    <Content Include="Images\아이템\speedup 4.png" />
+    <Content Include="Images\아이템\speedup 5.png" />
+    <Content Include="Images\아이템\speedup 6.png" />
+    <Content Include="Images\아이템\speedup 7.png" />
+    <Content Include="Images\아이템\speedup 8.png" />
+    <Content Include="Images\아이템\speedup 9.png" />
+    <Content Include="Images\이펙트\explosion 1.png" />
+    <Content Include="Images\이펙트\explosion 10.png" />
+    <Content Include="Images\이펙트\explosion 11.png" />
+    <Content Include="Images\이펙트\explosion 12.png" />
+    <Content Include="Images\이펙트\explosion 13.png" />
+    <Content Include="Images\이펙트\explosion 2.png" />
+    <Content Include="Images\이펙트\explosion 3.png" />
+    <Content Include="Images\이펙트\explosion 4.png" />
+    <Content Include="Images\이펙트\explosion 5.png" />
+    <Content Include="Images\이펙트\explosion 6.png" />
+    <Content Include="Images\이펙트\explosion 7.png" />
+    <Content Include="Images\이펙트\explosion 8.png" />
+    <Content Include="Images\이펙트\explosion 9.png" />
+    <Content Include="Images\이펙트\explosion_01.png" />
+    <Content Include="Images\이펙트\explosion_02.png" />
+    <Content Include="Images\이펙트\explosion_03.png" />
+    <Content Include="Images\총알,공격\400802194.png" />
+    <Content Include="Images\총알,공격\attack1.png" />
+    <Content Include="Images\총알,공격\attack2.png" />
+    <Content Include="Images\총알,공격\bullet.png" />
+    <Content Include="Images\총알,공격\bullet1.png" />
+    <Content Include="Images\총알,공격\bullet2.png" />
+    <Content Include="Images\총알,공격\bullet3.png" />
+    <Content Include="Images\총알,공격\bullet4.png" />
+    <Content Include="Images\타이틀, UI\CONTINUE.png" />
+    <Content Include="Images\타이틀, UI\GAME OVER.png" />
+    <Content Include="Images\타이틀, UI\HP.png" />
+    <Content Include="Images\타이틀, UI\Title.png" />
+    <Content Include="Images\플레이어\player.png" />
     <Content Include="Image\1스테이지 이미지\1sage background2.jpg" />
     <Content Include="Image\1스테이지 이미지\1stage background.jpg" />
     <Content Include="Image\1스테이지 이미지\1stage boss.png" />
