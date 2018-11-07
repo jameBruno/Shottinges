@@ -33,7 +33,7 @@ namespace Shooting
 
         Random rnd = new Random();
         
-        public int status;
+        public int status = 0;  // 게임 상태 - 0 : 대기 / 1 : 1p / 2 : 2p / 3 : 게임오버
         public int cnt;
         public int delay;
         public long pretime;
