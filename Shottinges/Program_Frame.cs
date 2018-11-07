@@ -40,6 +40,8 @@ namespace Shooting
 
         public int key;
 
+        public int keys;
+
         // 게임용 변수
         
         public int score;
