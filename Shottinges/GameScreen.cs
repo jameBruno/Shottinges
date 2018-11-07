@@ -39,137 +39,44 @@ namespace Shooting
         public Image title;                         //타이틀화면
         public Image title_key;
         
-        public Image[] chr = new Image[9];
-        public Image[] enemy = new Image[5];
-        public Image[] bullet = new Image[5];
-        public Image explo;
-        public Image[] item = new Image[3];
-
-        public Image _starts;
+        public Image[] chr = new Image[9];// 캐릭터
+        public Image[] enemy = new Image[5];// 적
+        public Image[] bullet = new Image[5];// 총알
+        public Image explo;// 폭발
+        public Image[] item = new Image[3];// 아이템
+        
 
         public Image _start;
         public Image _over;
         public Image shield;
 
-        public Image _Startes;
+        
 
         public Font font;
 
         public int[] v = { -2, -1, 0, 1, 2, 1, 0, -1 };
         public int[] v2 = { -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -7 };
         public int step = 0;
-        
+
+
+        public bool isRunning = false;//  게임 플레이 중인지 여부
+
 
         public GameScreen(Program_Frame main)
         {
             this.main = main;
-            //font = new Font("Default", 12, FontStyle.Bold);
+            font = new Font("Default", 12, FontStyle.Bold);
         }
 
         public void Paint(Graphics g)
         {
             if (gc == null)
             {
-                
-                
-                
-
-
+               
                 
             }
 
         }
-
-        public void Update(Graphics g)
-        {
-
-            cnt = main.cnt;
-            gamecnt = main.gamecnt;
-
-            if(gc == null)
-            {
-                return;
-            }
-
-            //dblPaint();
-
-            g.DrawImage(dblBuff, 0, 0);
-            
-        }
-
-        /*
-        public void dblPaint()
-        {
-            switch(main.status)
-            {
-                case 0:
-                    Draw_TITLE();
-                    gc.DrawString("Education ver", this.font, Brushes.Black, 10, 40);
-                    break;
-                case 1:
-                    Draw_BG();
-                    Draw_MY();
-                    Draw_BG2();
-                    drawImageAnc(_start, 0, 270, 3);
-                    break;
-
-                case 2:
-                
-                case 4://일시정지
-                    Draw_BG();
-                    Draw_MY();
-                    Draw_ENEMY();
-                    Draw_BULLET();
-                    Draw_EFFECT();
-                    Draw_ITEM();
-                    Draw_BG2();
-                    Draw_UI();
-                    break;
-
-                case 3://게임오버
-                    Draw_BG();
-                    Draw_ENEMY();
-                    Draw_BULLET();
-                    Draw_BG2();
-                    drawImageAnc(_over, 320, 240, 4);
-                    Draw_UI();
-                    break;
-                default:
-                    break;
-                    
-
-
-
-
-
-            }
-
-
-
-        }
-        */
-
-        public void SetColor(int Red, int Green, int Blue)
-        {
-            
-
-
-        }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
