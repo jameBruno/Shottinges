@@ -71,9 +71,7 @@ namespace Shooting
         public ArrayList effects = new ArrayList();
         public ArrayList items = new ArrayList();
 
-
-        public ArrayList items;
-        public ArrayList Items1;
+        
 
         /*
 
