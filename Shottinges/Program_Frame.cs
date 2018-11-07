@@ -38,6 +38,8 @@ namespace Shooting
         public long pretime;
         public int keybuff;
 
+        public int key;
+
         // 게임용 변수
         
         public int score;
