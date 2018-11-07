@@ -44,7 +44,8 @@ namespace Shooting
         public Image[] bullet = new Image[5];
         public Image explo;
         public Image[] item = new Image[3];
-        
+
+        public Image _starts;
 
         public Image _start;
         public Image _over;
