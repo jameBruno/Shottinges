@@ -144,7 +144,10 @@ namespace Shooting
 
         }
 
-
+        public void systemInit()
+        {
+            mymode = 1;
+        }
 
 
 
