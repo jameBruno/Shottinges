@@ -59,6 +59,9 @@ namespace Shooting
         public int step = 0;
 
 
+        public bool isRunning = false;//  게임 플레이 중인지 여부
+
+
         public GameScreen(Program_Frame main)
         {
             this.main = main;
@@ -74,23 +77,6 @@ namespace Shooting
             }
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
