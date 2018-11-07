@@ -38,6 +38,12 @@ namespace Shooting
         public long pretime;
         public int keybuff;
 
+        public int statuse;
+
+        public int key;
+        
+        public int keys;
+
         // 게임용 변수
         
         public int score;
@@ -104,15 +110,28 @@ namespace Shooting
 
         private int Score = 0;
 
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // Program_Frame
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Name = "Program_Frame";
+            this.Text = "s";
+            this.ResumeLayout(false);
+
+        }
+
         Random random;
         
-    
+        
         public Program_Frame()
         {
             // 플레이어 좌표값 초기화
             Player.X = 150;
             Player.Y = 350;
-
+            
             Enemy.X = 100;
             Enemy.Y = 0;
 
