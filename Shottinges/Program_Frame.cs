@@ -150,7 +150,7 @@ namespace Shooting
             
             // 플레이어생성
             myImg = new PictureBox();
-            myImg.Load(@"C:\Users\J\source\repos\Shottinges\Shottinges\Image\플레이어\player.png");
+            myImg.Load(@"Image\플레이어\player.png");
             myImg.Location = new System.Drawing.Point(myX, myY);
             myImg.Name = "player1";
             myImg.Size = new System.Drawing.Size(150, 120);
