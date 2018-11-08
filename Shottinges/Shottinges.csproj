@@ -78,14 +78,8 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.gl.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Program_Frame.resx">
-      <DependentUpon>Program_Frame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -254,8 +248,8 @@
     <Content Include="Image\폭발 등 이펙트 이미지\explosion_01.png" />
     <Content Include="Image\폭발 등 이펙트 이미지\explosion_02.png" />
     <Content Include="Image\폭발 등 이펙트 이미지\explosion_03.png" />
-    <Content Include="Image\플레이어 기체\player.png" />
-    <Content Include="Image\플레이어 기체\player2.png" />
+    <Content Include="Image\플레이어\player.png" />
+    <Content Include="Image\플레이어\player2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

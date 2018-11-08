@@ -46,18 +46,18 @@ namespace Shooting
 
         // 게임용 변수
         
-        public int score;
+        public int score;   // 현재 점수
         public int mylife;  // 남은 life
         public int gamecnt;
         public int scrspeed = 16;   // 프레임 단위시간
-        public int level;   // 현재 레벨
+        public int level = 1;   // 현재 레벨
 
-        public int myx, myy ;// 캐릭터 좌표
+        public int myX, myY ;// 캐릭터 좌표
         public int myspeed;
         public int mydegree;
 
-        public int mywidth, myheight;
-        public int mymode = 1;
+        public int myWidth, myHeight;   // 캐릭터 크기
+        public int mymode;  // 플레이 모드(1p / 2p)
         public int myimg;
         public int mycnt;
         public Boolean myshoot = false;
@@ -71,7 +71,7 @@ namespace Shooting
         public ArrayList effects = new ArrayList();
         public ArrayList items = new ArrayList();
 
-        
+
 
         /*
 
@@ -97,6 +97,8 @@ namespace Shooting
 
 
         // 플레이어
+        public PictureBox myImg;
+
         private System.Drawing.Point Player;
 
         private System.Drawing.Point Players;
@@ -129,20 +131,33 @@ namespace Shooting
         public Program_Frame()
         {
             // 플레이어 좌표값 초기화
-            Player.X = 150;
-            Player.Y = 350;
-            
-            Enemy.X = 100;
-            Enemy.Y = 0;
+            //Player.X = 150;
+            //Player.Y = 350;
 
-            Zig_Enemy.X = 200;
-            Zig_Enemy.Y = 0;
+            //Enemy.X = 100;
+            //Enemy.Y = 0;
 
-            Support.X = 300;
-            Support.Y = 0;
+            //Zig_Enemy.X = 200;
+            //Zig_Enemy.Y = 0;
 
+            //Support.X = 300;
+            //Support.Y = 0;
+
+            myX = 150;
+            myY = 350;
             random = new Random();
-
+            this.Controls.Clear();
+            
+            // 플레이어생성
+            myImg = new PictureBox();
+            myImg.Load(@"C:\Users\J\source\repos\Shottinges\Shottinges\Image\플레이어\player.png");
+            myImg.Location = new System.Drawing.Point(myX, myY);
+            myImg.Name = "player1";
+            myImg.Size = new System.Drawing.Size(150, 120);
+            myImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            myImg.TabIndex = 1;
+            myImg.TabStop = false;
+            this.Controls.Add(myImg);
 
         }
 
