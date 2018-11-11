@@ -1,4 +1,4 @@
-﻿namespace Shottinges
+﻿namespace Shotting
 {
     partial class Form1
     {

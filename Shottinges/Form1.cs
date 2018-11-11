@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Shooting;
 
-namespace Shottinges
+namespace Shotting
 {
     public partial class Form1 : Form
     {

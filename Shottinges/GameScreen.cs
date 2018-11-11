@@ -26,29 +26,32 @@ namespace Shooting
 
         int cnt, gamecnt;
 
+        // 화면 그리기용 변수
         int x, y;
 
+        // 더블 버퍼링용 버퍼
         Image dblBuff;
 
+        // 더블 버퍼링용 그래픽 컨텍스트
         Graphics gc;
 
 
-        public Image bg;                            //배경화면
+        public Image bg;                        //배경화면
         public Image bg_f;
-        public Image[] cloud = new Image[5];           //구름
-        public Image title;                         //타이틀화면
+        public Image[] cloud = new Image[5];    //구름
+        public Image title;                     //타이틀화면
         public Image title_key;
         
-        public Image[] chr = new Image[9];// 캐릭터
-        public Image[] enemy = new Image[5];// 적
-        public Image[] bullet = new Image[5];// 총알
-        public Image explo;// 폭발
-        public Image[] item = new Image[3];// 아이템
+        public Image[] chr = new Image[9];      // 캐릭터
+        public Image[] enemy = new Image[5];    // 적
+        public Image[] bullet = new Image[5];   // 총알
+        public Image explo;                     // 폭발
+        public Image[] item = new Image[3];     // 아이템
         
 
-        public Image _start;
-        public Image _over;
-        public Image shield;
+        public Image _start;                    // 시작로고
+        public Image _over;                     // 게임오버 로고
+        public Image shield;                    // 실드
 
         
 
