@@ -76,18 +76,6 @@ namespace Shooting
 
         }
 
-        
-        private void GameForms_Paint(object sender, PaintEventArgs e)
-        {
-            /*
-            Image image = Image.FromFile("D:\\1110_Shotting\\Shotting 수정\\Shottinges\\Shottinges\\Images\\플레이어\\player.png");
-            int x = 100;
-            int y = 200;
-            int width = 450;
-            int height = 150;
-            e.Graphics.DrawImage(image, x, y, width, height);
-            */
-
-        }
+       
     }
 }

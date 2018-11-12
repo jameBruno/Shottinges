@@ -15,10 +15,8 @@ namespace Shooting
         public _1Stage()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
-            
         }
-        
+
         public static int UP_PRESSED = 0x001;
         public static int DOWN_PRESSED = 0x002;
         public static int LEFT_PRESSED = 0x004;
@@ -61,129 +59,45 @@ namespace Shooting
         }
         */
 
-        Bitmap bit;
-
         // 이미지 폼 위에 그리기
         
         private void _1Stage_Paint(object sender, PaintEventArgs e)
         {
 
-            Image image = Image.FromFile("D:\\Shooting 수정 코드\\1110_Shotting\\Shotting 수정\\Shottinges\\Images\\플레이어\\player.png");
+            Image image = Image.FromFile("C:\\Users\\user\\Desktop\\Shooting 수정 코드\\1110_Shotting\\Shotting 수정\\Shottinges\\Shottinges\\Images\\플레이어\\player.png");
             int x = 12;
             int y = 311;
             int width = 144;
             int height = 113;
             e.Graphics.DrawImage(image, x, y, width, height);
-            
-            Image images = Image.FromFile("D:\\Shooting 수정 코드\\1110_Shotting\\Shotting 수정\\Shottinges\\Images\\1stage\\1stage enemy2.png");
+
+            Image images = Image.FromFile("C:\\Users\\user\\Desktop\\Shooting 수정 코드\\1110_Shotting\\Shotting 수정\\Shottinges\\Shottinges\\Images\\1stage\\1stage enemy2.png");
             int xPos = 687;
             int yPos = 12;
             int widths = 149;
             int heights = 105;
             e.Graphics.DrawImage(images, xPos, yPos, widths, heights);
 
-            Image enemy = Image.FromFile("D:\\Shooting 수정 코드\\1110_Shotting\\Shotting 수정\\Shottinges\\Images\\1stage\\1stage enermy.png");
+            Image enemy = Image.FromFile("C:\\Users\\user\\Desktop\\Shooting 수정 코드\\1110_Shotting\\Shotting 수정\\Shottinges\\Shottinges\\Images\\1stage\\1stage enermy.png");
             int xPoes = 735;
             int yPoes = 487;
             int widthes = 122;
             int heightes = 98;
             e.Graphics.DrawImage(enemy, xPoes, yPoes, widthes, heightes);
 
-            Image Item = Image.FromFile("D:\\Shooting 수정 코드\\1110_Shotting\\Shotting 수정\\Shottinges\\Shottinges\\Images\\아이템\\1up item 1.png");
-            int xImage = 51;
-            int yImage = 31;
-            int widthImage = 62;
-            int heightImage = 63;
-            e.Graphics.DrawImage(Item, xImage, yImage, widthImage, heightImage);
-
-            Image Item2 = Image.FromFile("D:\\Shooting 수정 코드\\1110_Shotting\\Shotting 수정\\Shottinges\\Shottinges\\Images\\아이템\\1up item 2.png");
-            int xImage2 = 51;
-            int yImage2 = 31;
-            int widthImage2 = 62;
-            int heightImage2 = 63;
-            e.Graphics.DrawImage(Item2, xImage2, yImage2, widthImage2, heightImage2);
-
-            Image Item3 = Image.FromFile("D:\\Shooting 수정 코드\\1110_Shotting\\Shotting 수정\\Shottinges\\Shottinges\\Images\\아이템\\1up item 3.png");
-            int xImage3 = 51;
-            int yImage3 = 31;
-            int widthImage3 = 62;
-            int heightImage3 = 63;
-            e.Graphics.DrawImage(Item3, xImage3, yImage3, widthImage3, heightImage3);
-
-
-            /*
-            Graphics g = e.Graphics;
-
-            foreach (Ball ball in balls)
-            {
-                ball.Update();
-                g.FillEllipse(ball.Brush, ball.Pos.X - ball.Radius, ball.Pos.Y - ball.Radius, ball.Radius * 2, ball.Radius * 2);
-
-            }
-            */
-
-
-                /*
-                bit = new Bitmap("1sage-background2.gif");
-
-                ImageAnimator.Animate(bit, new EventHandler(this.OnFrameChanged));
-
-                base.OnLoad(e);
-
-                */
-
-                /*
-                ImageAnimator.UpdateFrames();
-
-                Graphics g = pictureBox1.CreateGraphics();
-                */
-
-
-                //g.DrawImage(this.bit, new Point(0, 0));
-
-                //base.OnPaint(e);
-
-
-
-
-
-            }
-
-        protected override void OnLoad(EventArgs e)
-        {
-
-            bit = new Bitmap("D:\\Shooting 수정 코드\\1110_Shotting\\Shotting 수정\\Shottinges\\Shottinges\\Images\\1stage\\1stage-cloud2.gif");
             
-            ImageAnimator.Animate(bit, new EventHandler(this.OnFrameChanged));
-            
-            base.OnLoad(e);
+
+
         }
-
-        protected override void OnPaint(PaintEventArgs e)
-        {
-
-            ImageAnimator.UpdateFrames();
-            
-            Graphics g = this.CreateGraphics();
-               
-            
-            g.DrawImage(this.bit, new Point(0, 0));
-
-
-            base.OnPaint(e);
-        }
-
 
         // 키 이벤트 처리 구현 중
-
+        
         private void _1Stage_KeyPress(object sender, KeyPressEventArgs e)
         {
 
             if(status == 1)
             {
                 
-
-
             }
 
 
@@ -244,56 +158,7 @@ namespace Shooting
             
 
         }
-
-        private void _1Stage_KeyDown(object sender, KeyEventArgs e)
-        {
-
-            if(status == 1)
-            {
-                switch (e.KeyCode)
-                {
-                    
-
-
-                }
-
-
-
-            }
-
-
-
-
-        }
-
-        private void _1Stage_Load(object sender, EventArgs e)
-        {
-
-            
-            //bit = new Bitmap("1sage-background2.gif");
-              
-            //ImageAnimator.Animate(bit, new EventHandler(this.OnFrameChanged));
-            
-            //base.OnLoad(e);
-                        
-            
-
-        }
         
-
-        private void OnFrameChanged(object sender, EventArgs e)
-
-        {
-
-            //Image image = new Image()
-            
-
-            this.Invalidate();
-
-        }
-        
-
-
 
     }
 }

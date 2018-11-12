@@ -301,7 +301,7 @@ namespace Shooting
         }
 
 
-        private void KeyProcess()// -> 
+        private void KeyProcess()// -> 키 종합 처리
         {
             switch (status)
             {
@@ -330,74 +330,74 @@ namespace Shooting
                                 mydegree = -1;
                                 myimg = 0;
                                 break;
-                            //case FIRE_PRESSED:// -> 오류나서 주석처리해놓음
-                            //    mydegree = -1;
-                            //    myimg = 6;
-                            //    break;
-                            //case UP_PRESSED:
-                            //    mydegree = 0;
-                            //    myimg = 2;
-                            //    break;
-                            //case UP_PRESSED | FIRE_PRESSED:
-                            //    mydegree = 0;
-                            //    myimg = 6;
-                            //    break;
-                            //case LEFT_PRESSED:
-                            //    mydegree = 90;
-                            //    myimg = 4;
-                            //    break;
-                            //case LEFT_PRESSED | FIRE_PRESSED:
-                            //    mydegree = 90;
-                            //    myimg = 6;
-                            //    break;
-                            //case RIGHT_PRESSED:
-                            //    mydegree = 270;
-                            //    myimg = 2;
-                            //    break;
-                            //case RIGHT_PRESSED | FIRE_PRESSED:
-                            //    mydegree = 270;
-                            //    myimg = 6;
-                            //    break;
-                            //case UP_PRESSED | LEFT_PRESSED:
-                            //    mydegree = 45;
-                            //    myimg = 4;
-                            //    break;
-                            //case UP_PRESSED | LEFT_PRESSED | FIRE_PRESSED:
-                            //    mydegree = 45;
-                            //    myimg = 6;
-                            //    break;
-                            //case UP_PRESSED | RIGHT_PRESSED:
-                            //    mydegree = 315;
-                            //    myimg = 2;
-                            //    break;
-                            //case UP_PRESSED | RIGHT_PRESSED | FIRE_PRESSED:
-                            //    mydegree = 315;
-                            //    myimg = 6;
-                            //    break;
-                            //case DOWN_PRESSED:
-                            //    mydegree = 180;
-                            //    myimg = 2;
-                            //    break;
-                            //case DOWN_PRESSED | FIRE_PRESSED:
-                            //    mydegree = 180;
-                            //    myimg = 6;
-                            //    break;
-                            //case DOWN_PRESSED | LEFT_PRESSED:
-                            //    mydegree = 135;
-                            //    myimg = 4;
-                            //    break;
-                            //case DOWN_PRESSED | LEFT_PRESSED | FIRE_PRESSED:
-                            //    mydegree = 135;
-                            //    myimg = 6;
-                            //    break;
-                            //case DOWN_PRESSED | RIGHT_PRESSED:
-                            //    mydegree = 225;
-                            //    myimg = 2;
-                            //    break;
-                            //case DOWN_PRESSED | RIGHT_PRESSED | FIRE_PRESSED:
-                            //    mydegree = 225;
-                            //    myimg = 6;
-                            //    break;
+                            case 0x010:// -> FIRE_PRESSED
+                                mydegree = -1;
+                                myimg = 6;
+                                break;
+                            case 0x001:// -> UP_PRESSED
+                                mydegree = 0;
+                                myimg = 2;
+                                break;
+                            case 0x001 | 0x010:// -> UP_PRESSED | FIRE_PRESSED
+                                mydegree = 0;
+                                myimg = 6;
+                                break;
+                            case 0x004:// -> LEFT_PRESSED
+                                mydegree = 90;
+                                myimg = 4;
+                                break;
+                            case 0x004 | 0x010:// -> LEFT_PRESSED | FIRE_PRESSED
+                                mydegree = 90;
+                                myimg = 6;
+                                break;
+                            case 0x008:// -> RIGHT_PRESSED
+                                mydegree = 270;
+                                myimg = 2;
+                                break;
+                            case 0x008 | 0x010:// -> RIGHT_PRESSED | FIRE_PRESSED
+                                mydegree = 270;
+                                myimg = 6;
+                                break;
+                            case 0x001 | 0x004:// -> UP_PRESSED | LEFT_PRESSED
+                                mydegree = 45;
+                                myimg = 4;
+                                break;
+                            case 0x001 | 0x004 | 0x010:// -> UP_PRESSED | LEFT_PRESSED | FIRE_PRESSED
+                                mydegree = 45;
+                                myimg = 6;
+                                break;
+                            case 0x001 | 0x008:// -> UP_PRESSED | RIGHT_PRESSED
+                                mydegree = 315;
+                                myimg = 2;
+                                break;
+                            case 0x001 | 0x008 | 0x010:// -> UP_PRESSED | RIGHT_PRESSED | FIRE_PRESSED
+                                mydegree = 315;
+                                myimg = 6;
+                                break;
+                            case 0x002:// -> DOWN_PRESSED
+                                mydegree = 180;
+                                myimg = 2;
+                                break;
+                            case 0x002 | 0x010:// -> DOWN_PRESSED | FIRE_PRESSED
+                                mydegree = 180;
+                                myimg = 6;
+                                break;
+                            case 0x002 | 0x004:// -> DOWN_PRESSED | LEFT_PRESSED
+                                mydegree = 135;
+                                myimg = 4;
+                                break;
+                            case 0x002 | 0x004 | 0x010:// -> DOWN_PRESSED | LEFT_PRESSED | FIRE_PRESSED
+                                mydegree = 135;
+                                myimg = 6;
+                                break;
+                            case 0x002 | 0x008:// -> DOWN_PRESSED | RIGHT_PRESSED
+                                mydegree = 225;
+                                myimg = 2;
+                                break;
+                            case 0x002 | 0x008 | 0x010:// -> DOWN_PRESSED | RIGHT_PRESSED | FIRE_PRESSED
+                                mydegree = 225;
+                                myimg = 6;
+                                break;
                             default:
                                 //System.out.println(""+keybuff);
                                 keybuff = 0;

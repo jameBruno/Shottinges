@@ -86,7 +86,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(62, 63);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
             // 
             // pictureBox2
             // 
@@ -96,7 +95,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(62, 63);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
             // 
             // pictureBox3
             // 
@@ -106,7 +104,6 @@
             this.pictureBox3.Size = new System.Drawing.Size(62, 63);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
             // 
             // pictureBox4
             // 
@@ -167,9 +164,7 @@
             this.Controls.Add(this.label1);
             this.Name = "_1Stage";
             this.Text = "1stage";
-            this.Load += new System.EventHandler(this._1Stage_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this._1Stage_Paint);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this._1Stage_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this._1Stage_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
