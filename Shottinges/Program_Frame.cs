@@ -12,7 +12,7 @@ using System.Windows;
 using System.Threading;
 using System.Windows.Forms;
 using System.IO;
-using Shotting;
+using Shooting;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Controls;
 using static OpenCvSharp.Cuda.GpuMat;

@@ -75,11 +75,11 @@
     <Compile Include="Bullet.cs" />
     <Compile Include="Effect.cs" />
     <Compile Include="Enemy.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="GameForms.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GameForms.Designer.cs">
+      <DependentUpon>GameForms.cs</DependentUpon>
     </Compile>
     <Compile Include="GameScreen.cs" />
     <Compile Include="Item.cs" />
@@ -91,8 +91,8 @@
     <EmbeddedResource Include="1stage.resx">
       <DependentUpon>1stage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="GameForms.resx">
+      <DependentUpon>GameForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
