@@ -1,6 +1,6 @@
-﻿namespace Shottinges
+﻿namespace Shooting
 {
-    partial class Form1
+    partial class GameForms
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -28,34 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForms));
             this.lblScore = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn1PStart = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblScore
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("돋움", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblScore.Location = new System.Drawing.Point(12, 9);
+            this.lblScore.Location = new System.Drawing.Point(10, 7);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(35, 33);
+            this.lblScore.Size = new System.Drawing.Size(29, 27);
             this.lblScore.TabIndex = 0;
             this.lblScore.Text = "0";
             this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Form1
+            // textBox1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.textBox1.Location = new System.Drawing.Point(-15, -15);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.TabIndex = 1;
+            // 
+            // btn1PStart
+            // 
+            this.btn1PStart.BackColor = System.Drawing.Color.Green;
+            this.btn1PStart.Font = new System.Drawing.Font("함초롬바탕 확장B", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn1PStart.Location = new System.Drawing.Point(426, 491);
+            this.btn1PStart.Name = "btn1PStart";
+            this.btn1PStart.Size = new System.Drawing.Size(96, 23);
+            this.btn1PStart.TabIndex = 2;
+            this.btn1PStart.Text = "1P 게임 시작";
+            this.btn1PStart.UseVisualStyleBackColor = false;
+            this.btn1PStart.Click += new System.EventHandler(this.btn1PStart_Click);
+            // 
+            // GameForms
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1342, 902);
+            this.ClientSize = new System.Drawing.Size(1174, 624);
+            this.Controls.Add(this.btn1PStart);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblScore);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form1";
+            this.Name = "GameForms";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shotting Game";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameForms_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -65,6 +88,8 @@
         #endregion
 
         private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn1PStart;
     }
 }
 

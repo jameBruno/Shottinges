@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Shooting;
 
-namespace Shottinges
+namespace Shooting
 {
-    public partial class Form1 : Form
+    public partial class GameForms : Form
     {
 
-        public Form1()
+        public GameForms()
         {
             InitializeComponent();
         }
@@ -62,6 +62,32 @@ namespace Shottinges
                     // 공격 함수 구동
                     break;
             }
+        }
+
+        private void btn1PStart_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;           // 현재 폼 안보이게 하기
+
+            _1Stage frm = new _1Stage();        // 새 폼 생성
+            
+            frm.Owner = this;               // 새 폼의 오너를 현재 폼으로
+            
+            frm.Show();
+
+        }
+
+        
+        private void GameForms_Paint(object sender, PaintEventArgs e)
+        {
+            /*
+            Image image = Image.FromFile("D:\\1110_Shotting\\Shotting 수정\\Shottinges\\Shottinges\\Images\\플레이어\\player.png");
+            int x = 100;
+            int y = 200;
+            int width = 450;
+            int height = 150;
+            e.Graphics.DrawImage(image, x, y, width, height);
+            */
+
         }
     }
 }
