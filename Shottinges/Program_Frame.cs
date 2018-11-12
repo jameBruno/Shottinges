@@ -115,6 +115,8 @@ namespace Shooting
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Name = "Program_Frame";
             this.Text = "s";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Program_Frame_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Program_Frame_KeyUp);
             this.ResumeLayout(false);
 
         }
@@ -202,6 +204,8 @@ namespace Shooting
                     preTime = Environment.TickCount;
 
                     //gs.Paint();
+                    process();
+                    KeyProcess();
 
                     // 게임 루프 처리 시간을 delay값에서 차감 -> delay를 일정하게 유지
                     if (Environment.TickCount - preTime < delay)
@@ -233,7 +237,9 @@ namespace Shooting
 
 
         // 키 이벤트 리스너 처리
-        public void keyPressed(KeyEventArgs e)
+
+
+        private void Program_Frame_KeyDown(object sender, KeyEventArgs e)
         {
             //if(status==2&&(mymode==2||mymode==0)){
             if (status == 2)
@@ -271,8 +277,7 @@ namespace Shooting
             else if (status != 2) keybuff = (int)e.KeyCode;
         }
 
-
-        public void keyReleased(KeyEventArgs e)
+        private void Program_Frame_KeyUp(object sender, KeyEventArgs e)
         {
             //if(status==2&&(mymode==2||mymode==0)){
             //if(status==2){

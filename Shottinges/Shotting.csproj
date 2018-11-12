@@ -94,6 +94,9 @@
     <EmbeddedResource Include="GameForms.resx">
       <DependentUpon>GameForms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Program_Frame.resx">
+      <DependentUpon>Program_Frame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -13,7 +13,6 @@ namespace Shooting
 {
     public partial class GameForms : Form
     {
-
         public GameForms()
         {
             InitializeComponent();
@@ -73,9 +72,13 @@ namespace Shooting
             frm.Owner = this;               // 새 폼의 오너를 현재 폼으로
             
             frm.Show();
+            
 
         }
 
-       
+        private void GameForms_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
