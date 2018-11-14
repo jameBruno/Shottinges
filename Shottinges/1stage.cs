@@ -43,7 +43,10 @@ namespace Shooting
 
         Thread worker;              // 스레드 객체
 
-
+        int play_x = 12;
+        int play_y = 311;
+        int playwidth = 144;
+        int playheight = 113;
 
         /*
         private void GameForms_Paint(object sender, PaintEventArgs e)
@@ -75,25 +78,19 @@ namespace Shooting
         */
 
         // 이미지 폼 위에 그리기
-
+        Image image = Image.FromFile(@"C:\Users\rlaql\Desktop\Other\Shottinges\프로젝트 이미지\플레이어 기체\player.png");
+        Image images = Image.FromFile(@"C:\Users\rlaql\Desktop\Other\Shottinges\프로젝트 이미지\1스테이지 이미지\1stage enemy2.png");
+        Image enemy = Image.FromFile(@"C:\Users\rlaql\Desktop\Other\Shottinges\프로젝트 이미지\1스테이지 이미지\1stage enermy.png");
         private void _1Stage_Paint(object sender, PaintEventArgs e)
         {
-
-            Image image = Image.FromFile("C:\\Users\\J\\Desktop\\Shotting 수정\\Shottinges\\Shottinges\\Images\\플레이어\\player.png");
-            int x = 12;
-            int y = 311;
-            int width = 144;
-            int height = 113;
-            e.Graphics.DrawImage(image, x, y, width, height);
-
-            Image images = Image.FromFile("C:\\Users\\J\\Desktop\\Shotting 수정\\Shottinges\\Shottinges\\Images\\1stage\\1stage enemy2.png");
+            e.Graphics.DrawImage(image, play_x, play_y, playwidth, playheight);          
             int xPos = 687;
             int yPos = 12;
             int widths = 149;
             int heights = 105;
             e.Graphics.DrawImage(images, xPos, yPos, widths, heights);
 
-            Image enemy = Image.FromFile("C:\\Users\\J\\Desktop\\Shotting 수정\\Shottinges\\Shottinges\\Images\\1stage\\1stage enermy.png");
+            
             int xPoes = 735;
             int yPoes = 487;
             int widthes = 122;
@@ -114,9 +111,16 @@ namespace Shooting
                     //gs.Paint();
                     KeyProcess();
 
+                    Thread.Sleep(1000);
+                    Invalidate();
+
                     // 게임 루프 처리 시간을 delay값에서 차감 -> delay를 일정하게 유지
                     if (Environment.TickCount - preTime < delay)
-                        Thread.Sleep((int)(delay - Environment.TickCount + preTime));
+                    {
+
+                    }
+
+                   
 
                     if (4 != status)
                         cnt++;
@@ -233,6 +237,7 @@ namespace Shooting
                             case 0x004:// -> LEFT_PRESSED
                                 mydegree = 90;
                                 myimg = 4;
+                                play_x -= 10;
                                 break;
                             case 0x004 | 0x010:// -> LEFT_PRESSED | FIRE_PRESSED
                                 mydegree = 90;
@@ -241,6 +246,7 @@ namespace Shooting
                             case 0x008:// -> RIGHT_PRESSED
                                 mydegree = 270;
                                 myimg = 2;
+                                play_x += 10;
                                 break;
                             case 0x008 | 0x010:// -> RIGHT_PRESSED | FIRE_PRESSED
                                 mydegree = 270;
