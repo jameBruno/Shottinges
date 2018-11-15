@@ -165,6 +165,7 @@
             this.Controls.Add(this.label1);
             this.Name = "_1Stage";
             this.Text = "1stage";
+            this.Load += new System.EventHandler(this._1Stage_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this._1Stage_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this._1Stage_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this._1Stage_KeyUp);

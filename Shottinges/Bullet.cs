@@ -34,7 +34,7 @@ namespace Shooting
             this.degree = degree;
             this.speed = speed;
         }
-                 
+                  
         public double GetRadianAngle(double degree)
         {
             return degree * (Math.PI / 180d);

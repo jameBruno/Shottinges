@@ -22,7 +22,58 @@ namespace Shooting
         public int cnt;
         public int shoottype;
         public Bullet bul;
-        public Enemy(Program_Frame main, int img, int x, int y, int kind, int mode)
+
+        private float cxGridLocation;
+        private float cyGridLocation;
+        private float cxGraphicLocation;
+        private float cyGraphicLocation;
+        private float cShields;
+        private float cDamage;
+
+        public Enemy(float cxGridLocation, float cyGridLocation, float cxGraphicLocation, float cyGraphicLocation, float cShields, float cDamage)
+        {
+            this.cxGridLocation = cxGridLocation;
+            this.cyGridLocation = cyGridLocation;
+            this.cxGraphicLocation = cxGraphicLocation;
+            this.cyGraphicLocation = cyGraphicLocation;
+            this.cShields = cShields;
+            this.cDamage = cDamage;
+        }
+
+        public float xGridLocation
+        {
+            set { cxGridLocation = value; }
+            get { return cxGridLocation; }
+        }
+        public float yGridLocation
+        {
+            set { cyGridLocation = value; }
+            get { return cyGridLocation; }
+        }
+        public float xGraphicLocation
+        {
+            set { cxGraphicLocation = value; }
+            get { return cxGraphicLocation; }
+        }
+        public float yGraphicLocation
+        {
+            set { cyGraphicLocation = value; }
+            get { return cyGraphicLocation; }
+        }
+        public float shields
+        {
+            set { cShields = value; }
+            get { return cShields; }
+        }
+        public float damage
+        {
+            set { cDamage = value; }
+            get { return cDamage; }
+        }
+    
+
+
+        public Enemy(_1Stage main, int img, int x, int y, int kind, int mode)
         {
             this.main = main;
             pos = new Point(x, y);
@@ -36,18 +87,37 @@ namespace Shooting
             shoottype = main.RAND(0, 4);
         }
 
+        private void drawFighterMissiles()
+        {
+            for (int m = 0; m < fighterMissiles.Count; m++)
+            {
+                //g.FillRectangle(black, fighterMissiles[m].xGraphicLocation, fighterMissiles[m].yGraphicLocation, 12, 12);
+                fighterMissiles[m].xGraphicLocation = fighterMissiles[m].xGraphicLocation - 20;
+                g.DrawImage(fighterMissiles[m].picture, fighterMissiles[m].xGraphicLocation, fighterMissiles[m].yGraphicLocation, 12, 12);
+                fighterMissiles[m].distanceTraveled++;
+                if (fighterMissiles[m].distanceTraveled > 40)
+                {
+                    //g.FillRectangle(black, fighterMissiles[m].xGraphicLocation, fighterMissiles[m].yGraphicLocation, 12, 12);
+                    fighterMissiles.Remove(fighterMissiles[m]);
+                    break;
+                }
+            }
+        }
+
         public Boolean move()
         {
             Boolean ret = true;
             
             switch (shoottype)
             {
+
                 case 0:
                     if (cnt % 100 == 0 || cnt % 103 == 0 || cnt % 106 == 0)
                     {
                         bul = new Bullet(pos.X, pos.Y, 2, 1, main.getAngle(pos.X, pos.Y, main.myX, main.myY), 6);
                         main.bullets.Add(bul);
                     }
+
                     break;
                 case 1:
                     if (cnt % 90 == 0 || cnt % 100 == 0 || cnt % 110 == 0)
