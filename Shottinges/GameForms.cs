@@ -25,6 +25,7 @@ namespace Shooting
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+
             Program_Frame pf = new Program_Frame();
             switch (e.KeyCode)
             {

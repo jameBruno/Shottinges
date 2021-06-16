@@ -185,8 +185,8 @@ namespace Shooting
             delay = 17;
             keybuff = 0;
 
-            worker = new Thread(new ThreadStart(Program_Frame.StaticMethod));
-            worker.Start();
+            //worker = new Thread(new ThreadStart(Program_Frame.StaticMethod));
+            //worker.Start();
         }
 
         public void Init_Game()// -> 자바 소스에서 initialize() 역할
@@ -204,7 +204,7 @@ namespace Shooting
                     preTime = Environment.TickCount;
 
                     //gs.Paint();
-                    process();
+                    //process();
                     KeyProcess();
 
                     // 게임 루프 처리 시간을 delay값에서 차감 -> delay를 일정하게 유지
@@ -584,7 +584,7 @@ namespace Shooting
         {
             return (long)(DateTime.UtcNow - Jan1st1970).TotalMilliseconds;
         }
-        
+
 
         //// 스레드 파트 -> Run() 함수로
         //public void run()
@@ -594,12 +594,12 @@ namespace Shooting
         //        while (loof)
         //        {
         //            pretime = currentTimeMillis();
-                    
+
 
         //            //gameScreen.repaint();//화면 리페인트
         //            process();//각종 처리
         //            //keyprocess();//키 처리
-                    
+
         //            if (currentTimeMillis() - pretime < delay) Thread.Sleep(delay - (int)currentTimeMillis() + (int)pretime);
         //            //게임 루프를 처리하는데 걸린 시간을 체크해서 딜레이값에서 차감하여 딜레이를 일정하게 유지한다.
         //            //루프 실행 시간이 딜레이 시간보다 크다면 게임 속도가 느려지게 된다.
@@ -614,6 +614,7 @@ namespace Shooting
         //}
 
         // 각종 판단, 변수나 이벤트, CPU 관련 처리
+        /*
         private void process()
         {
             switch (status)
@@ -644,6 +645,7 @@ namespace Shooting
             }
             if (status != 4) gameCnt++;
         }
+        */
 
         public static double toRadians(double angdeg)
         {
@@ -756,7 +758,7 @@ namespace Shooting
                     bullets.Remove(i);           //화면 밖으로 나가면 총알 제거
                     continue;
                 }
-
+                    
                 if (buff.from == 0)
                 {//플레이어가 쏜 총알이 적에게 명중 판정
                     for (j = 0; j < enemies.Count; j++)
@@ -812,6 +814,7 @@ namespace Shooting
             }
         }
 
+        /*
         public void process_GAMEFLOW()
         {
             int control = 0;
@@ -857,6 +860,7 @@ namespace Shooting
                     break;
             }
         }
+        */
 
         public void process_ITEM()
         {
@@ -909,9 +913,10 @@ namespace Shooting
             return (degree + 180);
         }
 
-        
-
-
+        public static implicit operator Program_Frame(_1Stage v)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 
